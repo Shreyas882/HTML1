@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title> Case Conversion</title>
+<head>
+<script type="text/javascript">
+function toUpper(){
+document.getElementById("name").value=document.getElementById("name").value.toUpperCase();
+}
+function toLower(){
+document.getElementById("name").value=document.getElementById("name").value.toLowerCase();
+}
+</script>
+</head>
+<body bgcolor="grey" text="black">
+<center><h1>CASE CONVERSION </h1></center>
+<hr/>
+<form>
+<h2>Enter Your Name:<input type="text" id="name" size="50"/></h1><br/><br/>
+<input type="button" value="Convert to Upper" onclick="toUpper()"/>
+<input type="button" value="Convert to Lower" onclick="toLower()"/>
+</form>
+</body>
+</html>

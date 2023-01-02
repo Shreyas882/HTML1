@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Form and Form Elements</title>
+<script>
+function formdata(ja)
+{
+document.write("your name:"+ja.username.value+"</br>");
+document.write("your Email id:"+ja.email.value+"</br>");
+document.write("your Address:"+ja.address.value+"</br>");
+document.write("Gender:"+ja.gender.value+"</br>");
+document.write("Languages Known:");
+for( var i in ja.language)
+{
+if (ja.language[i].checked)
+{
+document.write(ja.language[i].value+ "
+,
+");
+}
+}
+document.write("</br>");
+document.write("course completed :"+ja.course.value + "</br>");
+document.write("resume file :"+ja.Resume.value + "</br>");
+}
+</script>
+</head>
+<body>
+<form name=
+"jobapp">
+<label> Name: </label>
+<input type=
+"text" name=
+"username" value=
+"" size=
+"25" maxlength=
+"50"/>
+<br/>
+<label> Email ID: </label>
+<input type=
+"text" name=
+"email" value=
+"">
+<br/>
+<label> address: </label>
+<textarea name=
+"address" rows=
+"6" cols=
+"25">
+pls enter your address
+</textarea>
+<br/>
+<label> Gender: </label>
+<label><input type=
+"radio" name=
+"gender" value=
+"Male"/>Male</label><br/>
+<label><input type=
+"radio" name=
+"gender" value=
+"FeMale"/>FeMale</label><br/>
+<br/>
+<label>What are the Languages you can speak </label>
+<label><input type=
+"checkbox" name=
+"language" value=
+"Hindi"/>Hindi</label><br/>
+<label><input type=
+"checkbox" name=
+"language" value=
+"Tamil"/>Tamil</label><br/>
+<label><input type=
+"checkbox" name=
+"language" value=
+"Telugu"/>Telugu</label><br/>
+<label><input type=
+"checkbox" name=
+"language" value=
+"Kannada"/>Kannada</label><br/>
+<label><input type=
+"checkbox" name=
+"language" value=
+"Malayalam"/>Malayalam</label><br/>
+<br/>
+<label> Your Qualification </label>
+<select name=
+"course">
+<option selected=
+"selected" value=
+""> select course</option>
+<option value=
+"BCA"> BCA</option>
+<option value=
+"BCom"> BCom</option>
+<option value=
+"BBA"> BBA</option>
+<option value=
+"BSc"> BSc</option>
+<option value=
+"BA"> BA</option>
+<option value=
+"MCA"> MCA</option>
+<option value=
+"MCom"> MCom</option>
+<option value=
+"MBA"> MBA</option>
+Web Programming Lab Manual REVA
+University
+School of Applied Science – BSc Computer Science Page 20
+<option value=
+"MSc"> MSc</option>
+<option value=
+"MA"> MA</option>
+</select>
+<br/>
+<label> Resume Upload</label>
+<input type=
+"file" name=
+"Resume"/>
+<br/>
+<input type=
+"submit" name=
+"submit" value=
+"Submit" onclick=
+"formdata(jobapp) "/>
+<input type=
+"reset" name=
+"reset" value=
+"Reset"/>
+</body>
+</html>

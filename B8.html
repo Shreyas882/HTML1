@@ -1,0 +1,27 @@
+<head>
+<title>Movement of Elements</title>
+<style type="text/css">
+#movable{position:absolute;}</style>
+<script type="text/javascript">
+var x=5;
+var y=5;
+var d_x=600;
+var d_y=600;
+var interval=10;
+function moveImage(){
+if(x<d_x)x=x+interval;
+if(y<d_y)y=y+interval;
+document.getElementById("movable").style.top=y+'px';
+document.getElementById("movable").style.left=x+'px';
+if((x+interval < d_x)&& (y+interval<d_y))
+{
+window.setTimeout("moveImage()",100);
+}
+}
+</script>
+</head>
+<body onLoad="moveImage()">
+<div id="movable">
+<img src="unnamed.png"></div>
+</body>
+</html>
